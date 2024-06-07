@@ -10,7 +10,7 @@ console.log(fav_movies);
 let currentmovie = localStorage.getItem('currentmovie') || '';
 async function getData(moviename){
     try{
-        let url="http://www.omdbapi.com/?i=tt3896198&apikey=29ed5880&t="+encodeURIComponent(moviename);
+        let url="https://www.omdbapi.com/?i=tt3896198&apikey=29ed5880&t="+encodeURIComponent(moviename);
      let response = await fetch(url);
     // console.log(data);
     let data=await response.json();

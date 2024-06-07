@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   async function getMoviePosterUrl(movie){
     try {
-        let url = "http://www.omdbapi.com/?i=tt3896198&apikey=29ed5880&t=" + encodeURIComponent(movie);
+        let url = "https://www.omdbapi.com/?i=tt3896198&apikey=29ed5880&t=" + encodeURIComponent(movie);
         let response = await fetch(url);
         let data = await response.json();
         return data;
