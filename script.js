@@ -16,7 +16,7 @@ async function getData(moviename){
     let data=await response.json();
     
     return data;
-}
+    }
 catch(err){
     console.log(err);
 }
@@ -85,6 +85,7 @@ document.addEventListener("click", (event) => {
             event.target.classList.remove("red");
             console.log(fav_movies);
         }
+        localStorage.setItem('fav_movies', JSON.stringify(fav_movies));
         console.log("Favorite Movies: ", fav_movies);
     }
 });

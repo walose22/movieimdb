@@ -8,9 +8,11 @@ document.addEventListener("DOMContentLoaded", function() {
         // const favMoviesContainer = document.getElementById("fav_movies_container");
         const fav_list=document.getElementById("fav_list");
         // Iterate over the fav_movies list and create image elements
+        fav_list.innerHTML = "";
         fav_movies.forEach(async movie => {
             
             let data=await getMoviePosterUrl(movie); 
+           
             const div=`<div id="div_details">
             <div id="fav_img_container"><img src=${data.Poster}></div>
             <div id="fav_details_container"><p>${data.Title}</p>
